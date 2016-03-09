@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Token is missing.';
+});
+
+Route::get('/crew', function () {
+    return view('crew');
+});
+
+Route::get('/howtoget', function () {
+    return view('howtoget');
 });
 
 /*
@@ -27,5 +35,10 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/guestslist',
+        ['as' => 'guestslist', 'uses' => 'MainController@guestslist']);
+    Route::get('/{token}',
+        ['as' => 'index', 'uses' => 'MainController@index']);
+    Route::post('/save/{field}/{userId}',
+        ['as' => 'save_field', 'uses' => 'MainController@saveField']);
 });

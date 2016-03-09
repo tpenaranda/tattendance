@@ -1,0 +1,352 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: #5e5d52;
+
+  background: url(/static/img/beachball1.jpg);
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 4.5em;
+  color: #333333;
+}
+
+h2, h3, h4, h5 {
+  color: #333333;
+}
+
+.responsive-table ul {
+  margin-bottom: 0px;
+}
+
+.responsive-table p {
+  margin: 0px;
+}
+
+a {
+  color: #1111FF;
+  font-size: 1.5em;
+}
+
+a:hover, a:focus {
+  color: #4b8ab2;
+  text-decoration: none;
+}
+
+.tableContainer {
+  margin: 3% 3%;
+}
+@media (min-width: 48em) {
+  .tableContainer {
+    margin: 2%;
+  }
+}
+@media (min-width: 75em) {
+  .tableContainer {
+    margin: 2em auto;
+    max-width: 75em;
+  }
+}
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 1.5em;
+  background-color: #FFFFFF;
+  opacity: 0.8;
+}
+@media (min-width: 48em) {
+  .responsive-table {
+    font-size: .9em;
+  }
+}
+@media (min-width: 62em) {
+  .responsive-table {
+    font-size: 1em;
+  }
+}
+.responsive-table thead {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .responsive-table thead {
+    position: relative;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+  }
+}
+.responsive-table thead th {
+  background-color: #1d96b2;
+  border: 1px solid #1d96b2;
+  font-weight: normal;
+  font-size: 1.1em;
+  text-align: center;
+  color: white;
+}
+.responsive-table thead th:first-of-type {
+  text-align: left;
+}
+.responsive-table tbody,
+.responsive-table tr,
+.responsive-table th,
+.responsive-table td {
+  display: block;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+}
+@media (min-width: 48em) {
+  .responsive-table tr {
+    display: table-row;
+  }
+}
+.responsive-table th,
+.responsive-table td {
+  padding: .5em;
+  vertical-align: middle;
+}
+@media (min-width: 30em) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: .75em .5em;
+  }
+}
+@media (min-width: 48em) {
+  .responsive-table th,
+  .responsive-table td {
+    display: table-cell;
+    padding: .5em;
+  }
+}
+@media (min-width: 62em) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: .75em .5em;
+  }
+}
+@media (min-width: 75em) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: .75em;
+  }
+}
+.responsive-table caption {
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .responsive-table caption {
+    font-size: 1.5em;
+  }
+}
+.responsive-table tfoot {
+  font-size: .8em;
+  font-style: italic;
+}
+@media (min-width: 62em) {
+  .responsive-table tfoot {
+    font-size: .9em;
+  }
+}
+@media (min-width: 48em) {
+  .responsive-table tbody {
+    display: table-row-group;
+  }
+}
+.responsive-table tbody tr {
+  margin-bottom: 1em;
+  border: 2px solid #1d96b2;
+}
+@media (min-width: 48em) {
+  .responsive-table tbody tr {
+    display: table-row;
+    border-width: 1px;
+  }
+}
+.responsive-table tbody tr:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 48em) {
+  .responsive-table tbody tr:nth-of-type(even) {
+    background-color: rgba(94, 93, 82, 0.1);
+  }
+}
+.responsive-table tbody th[scope="row"] {
+  background-color: #1d96b2;
+  color: white;
+}
+@media (min-width: 48em) {
+  .responsive-table tbody th[scope="row"] {
+    background-color: transparent;
+    color: #5e5d52;
+    text-align: left;
+  }
+}
+.responsive-table tbody td {
+  text-align: right;
+}
+@media (min-width: 30em) {
+  .responsive-table tbody td {
+    border-bottom: 1px solid #1d96b2;
+  }
+}
+@media (min-width: 48em) {
+  .responsive-table tbody td {
+    text-align: center;
+  }
+}
+.responsive-table tbody td[data-type=currency] {
+  text-align: right;
+}
+.responsive-table tbody td[data-title]:before {
+  content: attr(data-title);
+  float: left;
+  font-size: .8em;
+  color: rgba(94, 93, 82, 0.75);
+}
+@media (min-width: 30em) {
+  .responsive-table tbody td[data-title]:before {
+    font-size: .9em;
+  }
+}
+@media (min-width: 48em) {
+  .responsive-table tbody td[data-title]:before {
+    content: none;
+  }
+}
+
+#main {
+  width: 100%
+}
+
+.main-table {
+  border: 1px solid;
+  margin: 0em;
+  width: 90%;
+  background-color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.main-table thead th {
+  background-color: #1d96b2;
+  border: 1px solid #1d96b2;
+  font-weight: bold;
+  font-size: 4em;
+  text-align: center;
+  color: white;
+  padding-top: 0.5em;
+  width: 15em;
+  padding-bottom: 0.5em;
+}
+
+.main-table tbody tr td {
+  border-bottom: 1px solid black;
+}
+
+.main-table tbody tr td:first-of-type {
+  text-align: left;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.main-table tbody tr td:last-of-type {
+  text-align: right;
+  padding: 1em;
+}
+
+#comment-textarea {
+  resize: none;
+  width: 100%;
+  font-size: .75em;
+  font-weight: normal;
+}
+
+#comment-button {
+  width: 100%;
+  font-size: 25px;
+  height: auto;
+}
+
+p {
+    margin: 0px 0px 10px;
+    margin-right: 15px;
+    color: #000000;
+}
+
+p.small {
+  font-size: 0.65em;
+}
+
+.invitation {
+  padding-top: 1em;
+  width: 80%;
+  font-size: 2em;
+}
+
+#messages-td {
+  padding-bottom: .5em;
+  padding-top: .5em;
+  font-size: 2em;
+  text-align: center;
+}
+
+.red-cross {
+  color: red;
+}
+
+.green-tick {
+  color: green;
+}
+
+#msg-going {
+  color: #ADFF2F;
+}
+
+#msg-not-going {
+  color: red;
+}
+
+#center-sw {
+  position: fixed;
+  top:50%;
+  left:50%;
+  z-index: 100;
+}
+
+#comment-td {
+  text-align: left;
+  border-bottom: 0px none;
+  padding: .5em;
+}
+
+.no-display {
+  display: none;
+}
